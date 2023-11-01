@@ -122,7 +122,7 @@ export const About = () => {
             <img
                 src={Tailwind}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
-                data-aos="fade-up" />
+                />
         
         </div>
     
