@@ -44,11 +44,13 @@ export const About = () => {
     <div className="">
     <div className="flex justify-center">
         <div className="">
-            <img src={HeroImg} alt="IMG-20211017-123751" border="0" className='rounded-full w-64 h-64 '/>
+            <img src={HeroImg} alt="IMG-20211017-123751" border="0" className='rounded-full w-64 h-64 ' data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"/>
             {/* <h1 className="dark:text-white justify-center items-center flex mt-2">
                 Hi, internet
             </h1> */}
-            <h1 className="dark:text-white justify-center items-center flex text-2xl font-thin mt-2">
+            <h1 className="dark:text-white justify-center items-center flex text-2xl font-thin mt-2" data-aos="zoom-out-down">
                 Ilham Dika Permana
             </h1>
             <h1 className="dark:text-white justify-center items-center flex text-xl font-thin mt-2">
@@ -74,7 +76,8 @@ export const About = () => {
     </div>
     <div className="p-4 mt-4">
         <TypeIt className="dark:text-white text-3xl font-thin mobile:pt-32">About me</TypeIt>
-        <p className="dark:text-white text-xl font-thin mt-3 text-justify">
+        <p className="dark:text-white text-xl font-thin mt-3 text-justify"  data-aos="fade-up"
+     data-aos-duration="3000">
         I am a fresh graduate of S1 Informatics Engineering who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks. Ambitious to learn and grow from the experiences I've had.
         </p>
     </div>
@@ -94,34 +97,58 @@ export const About = () => {
             <img 
                 src={Html}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
             <img 
                 src={Css}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
              <img 
                 src={JavaScript}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
              <img 
                 src={Php}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
             <img
                 src={ReactJs}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
             <img
                 src={Laravel}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
             <img
                 src={Bootstrap}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
             <img
                 src={Tailwind}
                 className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
+                data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
                 />
         
         </div>
@@ -131,7 +158,8 @@ export const About = () => {
 <div className="mt-3">
     <h1 className="dark:text-white text-3xl font-bold text-center">Education</h1>
     <div className="flex justify-center items-center py-2">
-        <div className="">
+        <div className="" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
             <img src={Education} alt="IMG-20211017-123751" border="0" className='w-32 h-32 mx-auto'/>
             <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
                 2018 - 2022
