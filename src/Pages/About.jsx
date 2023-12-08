@@ -57,16 +57,16 @@ export const About = () => {
                 Web Developer
             </h1>
             <div className="flex flex-row">
-                <Link className="">
+                <Link to="https://github.com/ilhamdika" target='_blank'>
                     <img src={GitHub} className="w-10 h-10 mx-3 my-2 bg-dark rounded-3xl dark:rounded-none"/>
                 </Link>
-                <Link>
+                <Link to="https://www.instagram.com/ilham_dika/" target='_blank'>
                     <img src={Instagram} className="w-10 h-10 mx-3 my-2 bg-dark rounded-2xl dark:rounded-none"/>
                 </Link>
-                <Link>
+                <Link to={`mailto:ilham27dika@gmail.com`}>
                     <img src={Mail} className="w-10 h-10 mx-3 my-2 bg-dark rounded-xl dark:rounded-none"/>
                 </Link>
-                <Link>
+                <Link to={"https://www.linkedin.com/in/ilham-dika-permana/"} target='_blank'>
                     <img src={LinkedIn} className="w-10 h-10 mx-3 my-2 bg-dark rounded-3xl dark:rounded-none"/>
                 </Link>
             </div>
