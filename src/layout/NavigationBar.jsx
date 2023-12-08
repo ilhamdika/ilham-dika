@@ -23,6 +23,11 @@ export default function NavigationBar ({text, click}){
         
       ];
       let [open,setOpen]=useState(false);
+
+      const closeMenu = () => {
+        setOpen(false);
+      }
+
     return (
       <div className='shadow-tablet w-full fixed-absolute top-0 left-0 mobile:fixed mobile:bg-gray-500 mobile:bg-opacity-50 '>
           <div className='tablet:flex items-center justify-between py-4 tablet:px-10 px-7'>
@@ -46,7 +51,7 @@ export default function NavigationBar ({text, click}){
                   </li> */}
                   {
                     Menu.map((menu)=>(
-                      <li key={menu.name} className='laptop:ml-8 text-xl tablet:my-0 my-7'>
+                      <li key={menu.name} onClick={closeMenu} className='laptop:ml-8 text-xl tablet:my-0 my-7'>
                         <Link to={menu.link}className='dark:text-white hover:text-gray-400 duration-500 ml-5 mr-10'>
                           {menu.name}
                         </Link>
