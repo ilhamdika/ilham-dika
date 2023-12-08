@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { BsList } from "react-icons/bs";
@@ -28,8 +28,28 @@ export default function NavigationBar ({text, click}){
         setOpen(false);
       }
 
+      const [prevScrollPos, setPrevScrollPos] = useState(0);
+      const [visible, setVisible] = useState(true);
+
+        useEffect(() => {
+            const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+            setPrevScrollPos(currentScrollPos);
+            };
+
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+            window.removeEventListener('scroll', handleScroll);
+            };
+        }, [prevScrollPos]);
+
     return (
-      <div className='shadow-tablet w-full fixed-absolute top-0 left-0 mobile:fixed mobile:bg-gray-500 mobile:bg-opacity-50 '>
+      <div className={`navbar ${visible ? 'mobile:block mobile:relative' : 'mobile:hidden'}`}>
+      <div className='shadow-tablet w-full fixed-absolute top-0 left-0 mobile:fixed mobile:bg-blue-500 dark:bg-gray-500 '>
           <div className='tablet:flex items-center justify-between py-4 tablet:px-10 px-7'>
               <div className='text-3xl cursor-pointer flex items-center dark:text-white'>
                 <Link to='/'>
@@ -58,12 +78,13 @@ export default function NavigationBar ({text, click}){
                       </li>
                     ))
                   }
-                  <Button onClick={click}
+                  {/* <Button onClick={click}
                     className="text-white bg-slate-600 dark:bg-white dark:text-black ">
                     {text}
-                  </Button>
+                  </Button> */}
               </ul>
           </div>
+    </div>
     </div>
     )
 }
