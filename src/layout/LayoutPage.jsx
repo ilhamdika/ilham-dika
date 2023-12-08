@@ -33,7 +33,11 @@ export default function LayoutPage ({children}){
                         {children}
                     </main>
                 </div>
-
+                <button onClick={toggleTheme}
+                className="text-white bg-slate-600 h-10 w-10 dark:bg-white dark:text-black fixed bottom-5 right-5 rounded-full"
+                >
+                {dark ? <FiMoon size="32"/> : <FiSun size="32"/> }
+            </button>
             </div>
         </div>
         </>

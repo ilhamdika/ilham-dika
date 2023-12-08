@@ -49,7 +49,7 @@ export default function NavigationBar ({text, click}){
 
     return (
       <div className={`navbar ${visible ? 'mobile:block mobile:relative' : 'mobile:hidden'}`}>
-      <div className='shadow-tablet w-full fixed-absolute top-0 left-0 mobile:fixed mobile:bg-blue-500 dark:bg-gray-500 '>
+      <div className='shadow-tablet w-full fixed-absolute top-0 left-0 mobile:fixed mobile:bg-blue-500 mobile:dark:bg-gray-500 '>
           <div className='tablet:flex items-center justify-between py-4 tablet:px-10 px-7'>
               <div className='text-3xl cursor-pointer flex items-center dark:text-white'>
                 <Link to='/'>
