@@ -29,7 +29,7 @@ export const Index = () => {
             </div> :
         <div>
             {/* Hero Content */}
-            <div className="flex justify-center items-center py-36">
+            <div className="flex justify-center items-center py-28 mobile:pt-36 mobile:pb-16">
                 <div className="">
                     <img src={Foto} alt="IMG-20211017-123751" border="0" className='rounded-full w-64 h-64' data-aos="fade-down"
      data-aos-easing="linear"
