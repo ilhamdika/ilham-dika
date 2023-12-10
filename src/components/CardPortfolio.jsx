@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const CardPortfolio = ({className, thumbnail, title, description}) => {
+export const CardPortfolio = ({className, thumbnail, title, description, href}) => {
   return (
-    <div className={`bg-slate-900 mr-3 ml-3 my-2 mobile:h-96 mobile:w-full mobile:my-3 mobile:mx-auto` + className }>
-        <Link>
-        <img src={thumbnail} alt="Gambar" className="w-72 mb-4 m-auto mt-10 mobile:h-56 mobile:w-72 mobile:mx-auto " />
+    <div className={`bg-slate-200 mr-3 ml-3 my-2 mobile:h-100 mobile:w-full mobile:my-3 mobile:mx-auto` + className }>
+        <Link target="_blank" to={href}>
+        <img src={thumbnail} alt="Gambar" className="w-72 mb-4 m-auto mt-10 mobile:h-56 mobile:w-56 mobile:mx-auto " />
         </Link>
-        <h3 className="text-3xl mb-2 text-white font-light text-center">
+        <Link target="_blank" to={href}>
+        <h3 className="text-3xl mb-2 dark:text-white font-light text-center">
             {title}
         </h3>
-        <p className="text-white font-light text-center">
+        </Link>
+        <p className="dark:text-white font-light text-center px-2">
             {description}
         </p>
       </div>
