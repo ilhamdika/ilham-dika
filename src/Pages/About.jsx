@@ -160,7 +160,8 @@ export const About = () => {
     <div className="flex justify-center items-center py-2">
         <div className="" data-aos="fade-up"
      data-aos-anchor-placement="top-bottom">
-            <img src={Education} alt="IMG-20211017-123751" border="0" className='w-32 h-32 mx-auto'/>
+            <img src={Education} alt="IMG-20211017-123751" border="0" className='w-32 h-32 mx-auto bg-black rounded-3xl dark:bg-none'/>
+        
             <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
                 2018 - 2022
             </h1>
