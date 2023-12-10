@@ -52,7 +52,7 @@ export const Portfolio = () => {
                 <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
                 thumbnail={webMarketplace}
                 title={'Web Marketplace'}
-                description={'Web Marketplace with laravel framework and react js as frontend and tailwind css as styling web'}
+                description={'Web Marketplace with PHP native and Bootstrap as styling web'}
                 href={'https://github.com/ilhamdika/marketplace-furniture'}
                 />
 
