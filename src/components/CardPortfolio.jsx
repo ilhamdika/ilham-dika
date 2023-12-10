@@ -12,7 +12,7 @@ export const CardPortfolio = ({className, thumbnail, title, description, href}) 
             {title}
         </h3>
         </Link>
-        <p className="dark:text-white font-light text-center px-2">
+        <p className="dark:text-white font-light text-center px-2 py-2">
             {description}
         </p>
       </div>

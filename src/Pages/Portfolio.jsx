@@ -45,7 +45,7 @@ export const Portfolio = () => {
                 <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
                 thumbnail={webFilm}
                 title={'Web Film'}
-                description={'Web Film with laravel framework and react js as frontend and tailwind css as styling web'}
+                description={'Web Film with laravel framework and react js as frontend and tailwind css as styling web and using payment gateway midtrans'}
                 href={'https://github.com/ilhamdika/watch-film'}
                 />
 
