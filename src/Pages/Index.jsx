@@ -7,6 +7,9 @@ import Card from "../components/Card";
 import HeroImg from "../assets/images/landing.png"
 import HeroImg2 from "../assets/images/landing2.png"
 import Foto from "../assets/images/foto.jpeg"
+import webDev from "../assets/images/webDev.png"
+import editing from "../assets/images/editing.png"
+import writing from "../assets/images/writing.png"
 import { Link } from 'react-router-dom';
 
 export const Index = () => {
@@ -51,19 +54,39 @@ export const Index = () => {
             </div>
 
             {/* card */}
-            <div className="flex flex-col h-screen laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto" >
-                {[1,2,3].map(i=> (
+            <div className="grid grid-cols-3 laptop:flex-row dekstop:flex-row mobile:grid-cols-1 mt-2">
+                {/* {[1,2,3].map(i=> (
                 <Card
                 key={i}
                 thumbnail={'https://static.vecteezy.com/system/resources/previews/000/330/430/original/vector-pencil-line-black-icon.jpg'}
                 title={'Web Developer'}
                 description={'Create a website for information, business etc., which can be accessed digitally'}
                 />
-                ))}
+                ))} */}
+                 <Card
+                thumbnail={webDev}
+                title={'Web Developer'}
+                description={'Create a website for information, business etc., which can be accessed digitally'}
+                href={'/portfolio'}
+                />
+                 <Card
+                thumbnail={editing}
+                title={'Editor'}
+                description={`I like editing, although I'm not very good at it, but I have a hobby of doing it`}
+                href={'https://www.instagram.com/kittencutee_/'}
+                target={'_blank'}
+                />
+                 <Card
+                thumbnail={writing}
+                title={'Write'}
+                description={`Writing is sometimes a fun thing for me even though I rarely publish, but it is part of filling my free time`}
+                href={'https://www.instagram.com/kittencutee_/'}
+                target={'_blank'}
+                />
             </div>
             
             
-            <div className="grid grid-cols-2 laptop:flex-row dekstop:flex-row mobile:grid-cols-1 mt-3">
+            <div className="grid grid-cols-2 laptop:flex-row dekstop:flex-row mobile:grid-cols-1 mt-10 mobile:mt-20">
                     <div className="">
                         <img src={HeroImg2} alt="IMG-20211017-123751" border="0" className='w-auto h-auto' data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="200"/>
                     </div>
@@ -73,7 +96,7 @@ export const Index = () => {
 
             </div>
 
-            <div className="justify-center items-center py-36">
+            <div className="justify-center items-center py-36" id='writing'>
                 <h1 className="dark:text-white text-center text-3xl font-semibold" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1000">
