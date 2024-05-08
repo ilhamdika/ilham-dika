@@ -1,6 +1,8 @@
 import NavigationBar from "./NavigationBar"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import moment from "moment-timezone";
+import InfoBottom from "./InfoBottom";
 
 
 export default function LayoutPage ({children}){
@@ -12,6 +14,7 @@ export default function LayoutPage ({children}){
     document.documentElement.classList.toggle('dark');
   };
 
+  
     
     return(
         <>
@@ -33,11 +36,9 @@ export default function LayoutPage ({children}){
                         {children}
                     </main>
                 </div>
-                <button onClick={toggleTheme}
-                className="text-white bg-slate-600 h-10 w-10 dark:bg-white dark:text-black fixed bottom-5 right-5 rounded-full"
-                >
-                {dark ? <FiMoon size="32"/> : <FiSun size="32"/> }
-            </button>
+                 <div>
+                    <InfoBottom/>
+                </div>   
             </div>
         </div>
         </>
