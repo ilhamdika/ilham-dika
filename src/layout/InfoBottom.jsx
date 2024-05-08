@@ -71,7 +71,6 @@ export default function InfoBottom (){
             <div className={`fixed bottom-5 left-5 p-2  bg-blue-200 rounded-xl ${showDateTime ? "opacity-100 transition-opacity duration-500" : "opacity-0 transition-opacity duration-500"}`}>
                 <p>{formatDate(dateTime)}</p>
             </div>
-            {/* Your rest of the component */}
         </div>
     </div>
   )
