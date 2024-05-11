@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import TypeIt from 'typeit-react'
 import { Link } from 'react-router-dom'
 import { DotLoader } from "react-spinners"
-import HeroImg from "../assets/images/landing.png"
+import HeroImg from "../assets/images/foto_about.png"
 import HeroImg2 from "../assets/images/landing2.png"
 import GitHub from "../assets/images/github.png"
 import Instagram from "../assets/images/instagram.png"
@@ -40,11 +40,11 @@ export const About = () => {
                 <DotLoader color={'#a9dbd2'} loading={loading} size={150} />
             </div> :
     <div>
-    <div className="grid grid-cols-2 dekstop:h-screen laptop:h-screen laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 pt-32">
+    <div className="grid grid-cols-2 dekstop:h-screen laptop:h-screen laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 pt-10 mobile:pt-32">
     <div className="">
     <div className="flex justify-center">
         <div className="">
-            <img src={HeroImg} alt="IMG-20211017-123751" border="0" className='rounded-full w-64 h-64 ' data-aos="fade-down"
+            <img src={HeroImg} alt="IMG-20211017-123751" border="0" className='rounded-full w-64' data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500"/>
             {/* <h1 className="dark:text-white justify-center items-center flex mt-2">
@@ -78,7 +78,7 @@ export const About = () => {
         <TypeIt className="dark:text-white text-3xl font-thin mobile:pt-32">About me</TypeIt>
         <p className="dark:text-white text-xl font-thin mt-3 text-justify"  data-aos="fade-up"
      data-aos-duration="3000">
-        I am a fresh graduate of S1 Informatics Engineering who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks. Ambitious to learn and grow from the experiences I've had.
+        I am a fullstack developer who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks. Ambitious to learn and grow from the experiences I've had.
         </p>
     </div>
 </div>

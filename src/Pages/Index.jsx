@@ -91,7 +91,7 @@ export const Index = () => {
                         <img src={HeroImg2} alt="IMG-20211017-123751" border="0" className='w-auto h-auto' data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="200"/>
                     </div>
                     <div className="">
-                        <p className="dark:text-white mx-8 laptop:py-36 mobile:mt-2 mobile:mx-auto" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="200">I am a fresh graduate of S1 Informatics Engineering who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks. Ambitious to learn and grow from the experiences I've had.</p>
+                        <p className="dark:text-white mx-8 laptop:py-36 mobile:mt-2 mobile:mx-auto" data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="200">I am a fullstack web developer who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks. Ambitious to learn and grow from the experiences I've had.</p>
                     </div>
 
             </div>
