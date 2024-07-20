@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { DotLoader } from 'react-spinners';
+import { FaArrowLeft } from 'react-icons/fa';
 import defaultThumbnail from '@/assets/images/portfolio/webFilm.png';
 
 export const PortfolioDetail = () => {
     const { shortName } = useParams(); 
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [item, setItem] = useState(null);
 
@@ -23,8 +25,6 @@ export const PortfolioDetail = () => {
                 }
 
                 const data = await response.json();
-                //console.log('Fetched Data:', data);
-
                 setItem(data);
             } catch (error) {
                 console.error('Error fetching item data:', error);
@@ -43,16 +43,24 @@ export const PortfolioDetail = () => {
                     <DotLoader color={'#a9dbd2'} loading={loading} size={150} />
                 </div>
             ) : item ? (
-                <div className="container mx-auto p-4">
-                    <div className="flex flex-col items-center">
+                <div className="container mx-auto laptop:p-4 mobile:mt-20">
+                    <button 
+                        onClick={() => navigate(-1)} 
+                        className="mb-3"
+                    >
+                        <FaArrowLeft className="mr-3 text-2xl"  />
+                    </button>
+                    <div className="flex flex-col mobile:flex-col tablet:flex-row items-center tablet:items-start">
                         <img
                             src={item.thumbnail ? `${import.meta.env.VITE_BASE_URL}/${item.thumbnail}` : defaultThumbnail}
                             alt={item.title}
-                            className="w-full max-w-md rounded-lg shadow-lg"
+                            className="w-full tablet:w-1/2 max-w-md rounded-lg shadow-lg"
                         />
-                        <h1 className="text-3xl font-bold mt-4 dark:text-white">{item.title}</h1>
-                        <p className="mt-2 text-lg dark:text-white">{item.deskripsi}</p>
-                        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{item.keterangan}</p>
+                        <div className="mt-4 tablet:mt-0 tablet:ml-8">
+                            <h1 className="text-3xl font-bold dark:text-white">{item.title}</h1>
+                            <p className="mt-2 text-lg dark:text-white">{item.deskripsi}</p>
+                            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{item.keterangan}</p>
+                        </div>
                     </div>
                 </div>
             ) : (
