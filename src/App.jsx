@@ -1,14 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import LayoutPage from "./layout/LayoutPage";
-import TypeIt from "typeit-react";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import HeroImg from "./assets/images/landing.png"
-import HeroImg2 from "./assets/images/landing2.png"
 import HomePage from './Pages/Index'
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio/Portfolio";
+import PortfolioDetail from "./Pages/Portfolio/PortfolioDetail";
 import AOS from 'aos';
 import { useEffect } from "react";
 
@@ -21,6 +17,7 @@ const app = () => {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:shortName" element={<PortfolioDetail />} />
             <Route path="/about" element={<About />} />
         </Routes>
     </LayoutPage>
