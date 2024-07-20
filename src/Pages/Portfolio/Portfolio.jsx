@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { CardPortfolio } from '../components/CardPortfolio';
+import { CardPortfolio } from '@/components/CardPortfolio'; 
 import TypeIt from 'typeit-react';
 import { DotLoader } from 'react-spinners';
-import defaultThumbnail from '../assets/images/portfolio/webFilm.png'; 
+import defaultThumbnail from '@/assets/images/portfolio/webFilm.png'; 
 
 export const Portfolio = () => {
     const [loading, setLoading] = useState(true);
@@ -67,7 +67,7 @@ export const Portfolio = () => {
                                     thumbnail={thumbnailUrl}
                                     title={item.title}
                                     description={item.deskripsi}
-                                    href={`https://example.com/${item.shortName}`}
+                                    href={`${item.shortName}`}
                                 />
                             );
                         })}

@@ -8,7 +8,7 @@ import HeroImg from "./assets/images/landing.png"
 import HeroImg2 from "./assets/images/landing2.png"
 import HomePage from './Pages/Index'
 import About from "./Pages/About";
-import Portfolio from "./Pages/Portfolio";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 import AOS from 'aos';
 import { useEffect } from "react";
 
