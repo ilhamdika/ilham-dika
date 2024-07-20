@@ -23,7 +23,7 @@ export const Portfolio = () => {
                 }
 
                 const data = await response.json();
-                console.log('Fetched Data:', data);
+                //console.log('Fetched Data:', data);
 
                 const fixedData = data.map(item => ({
                     ...item,
@@ -58,7 +58,7 @@ export const Portfolio = () => {
                     <div className="grid grid-cols-3 laptop:flex-row desktop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 my-10">
                         {portfolioItems.map(item => {
                             const thumbnailUrl = item.thumbnail ? `${import.meta.env.VITE_BASE_URL}/${item.thumbnail}` : defaultThumbnail;
-                            console.log('Thumbnail URL:', thumbnailUrl); 
+                            //console.log('Thumbnail URL:', thumbnailUrl); 
 
                             return (
                                 <CardPortfolio
