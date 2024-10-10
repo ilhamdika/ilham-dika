@@ -9,6 +9,7 @@ import webFilm from "../assets/images/portfolio/webFilm.png"
 import webTisera from "../assets/images/portfolio/webTisera.png"
 import webYokulak from "../assets/images/portfolio/webYokulak.png"
 import webTokokita from "../assets/images/portfolio/webTokokita.png"
+import webPerpusKita from "../assets/images/portfolio/webPerpusKita.png"
 
 export const Portfolio = () => {
     const [loading,setLoading]=useState(false)
@@ -57,6 +58,13 @@ export const Portfolio = () => {
                         title={'Tokokita'}
                         description={'e-commerce based grocery shopping from home'}
                         href={'https://tokokita.co.id/'}
+                        />
+
+                        <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
+                        thumbnail={webPerpusKita}
+                        title={'Perpustakaan Kita'}
+                        description={'e-commerce based library'}
+                        href={'https://web.perpuskita.id/'}
                         />
 
                         <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
