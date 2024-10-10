@@ -62,7 +62,7 @@ export const Portfolio = () => {
 
                         <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
                         thumbnail={webPerpusKita}
-                        title={'Perpustakaan Kita'}
+                        title={'Perpus Kita'}
                         description={'e-commerce based library'}
                         href={'https://web.perpuskita.id/'}
                         />
