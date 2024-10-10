@@ -6,6 +6,9 @@ import { DotLoader } from "react-spinners"
 import Satpam from "../assets/images/portfolio/webSatpam.png"
 import webMarketplace from "../assets/images/portfolio/webMarketplace.png"
 import webFilm from "../assets/images/portfolio/webFilm.png"
+import webTisera from "../assets/images/portfolio/webTisera.png"
+import webYokulak from "../assets/images/portfolio/webYokulak.png"
+import webTokokita from "../assets/images/portfolio/webTokokita.png"
 
 export const Portfolio = () => {
     const [loading,setLoading]=useState(false)
@@ -34,6 +37,27 @@ export const Portfolio = () => {
                         description={'Create a website for information, business etc., which can be accessed digitally'}
                         />
                         ))} */}
+
+                        <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
+                        thumbnail={webTisera}
+                        title={'Tisera'}
+                        description={'marketplace for government agency purchases and sales'}
+                        href={'https://tisera.id/'}
+                        />
+
+                        <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
+                        thumbnail={webYokulak}
+                        title={'Yokulak'}
+                        description={'wholesale purchases for stall sellers'}
+                        href={'https://yokulak.com/'}
+                        />
+
+                        <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
+                        thumbnail={webTokokita}
+                        title={'Tokokita'}
+                        description={'e-commerce based grocery shopping from home'}
+                        href={'https://tokokita.co.id/'}
+                        />
 
                         <CardPortfolio className={'bg-slate-900 bg-opacity-50 rounded-xl'}
                         thumbnail={Satpam}
