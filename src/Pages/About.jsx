@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import TypeIt from 'typeit-react'
 import { Link } from 'react-router-dom'
 import { DotLoader } from "react-spinners"
-import HeroImg from "../assets/images/profile.JPEG"
+import HeroImg from "../assets/images/profile.jpeg"
 import HeroImg2 from "../assets/images/landing2.png"
 import GitHub from "../assets/images/github.png"
 import Instagram from "../assets/images/instagram.png"
