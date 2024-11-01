@@ -40,7 +40,7 @@ export const About = () => {
                 <DotLoader color={'#a9dbd2'} loading={loading} size={150} />
             </div> :
     <div>
-    <div className="grid grid-cols-2 dekstop:h-screen laptop:h-screen laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 pt-10 mobile:pt-32">
+    <div className="grid grid-cols-2 laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 pt-10 mobile:pt-32 mb-2">
     <div className="">
     <div className="flex justify-center">
         <div className="">
@@ -155,27 +155,27 @@ export const About = () => {
     
 </div>
 
-<div className="mt-3">
-    <h1 className="dark:text-white text-3xl font-bold text-center">Education</h1>
-    <div className="flex justify-center items-center py-2">
-        <div className="" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
-            <img src={Education} alt="IMG-20211017-123751" border="0" className='w-32 h-32 mx-auto bg-black rounded-3xl dark:bg-none'/>
-        
-            <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
-                2018 - 2022
-            </h1>
-            <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
-                Bachelor of Computer Science
-            </h1>
-            <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
-                Muria Kudus University
-            </h1>
-            
-            
-        </div>
-    </div>
-</div>
+        {/* <div className="mt-3">
+            <h1 className="dark:text-white text-3xl font-bold text-center">Education</h1>
+            <div className="flex justify-center items-center py-2">
+                <div className="" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
+                    <img src={Education} alt="IMG-20211017-123751" border="0" className='w-32 h-32 mx-auto bg-black rounded-3xl dark:bg-none'/>
+                
+                    <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
+                        2018 - 2022
+                    </h1>
+                    <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
+                        Bachelor of Computer Science
+                    </h1>
+                    <h1 className="dark:text-white justify-center text-center items-center flex text-3xl font-thin mt-2">
+                        Muria Kudus University
+                    </h1>
+                    
+                    
+                </div>
+            </div>
+        </div> */}
     </div>
     }
     </>
