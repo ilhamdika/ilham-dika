@@ -11,6 +11,7 @@ import webYokulak from "../assets/images/portfolio/webYokulak.png";
 import webTokokita from "../assets/images/portfolio/webTokokita.png";
 import webPerpusKita from "../assets/images/portfolio/webPerpusKita.png";
 import webTelemedicine from "../assets/images/portfolio/webTelemedicine.png";
+import webQuran from "../assets/images/portfolio/webQuran.png";
 
 export const Portfolio = () => {
   const [loading, setLoading] = useState(false);
@@ -49,6 +50,8 @@ export const Portfolio = () => {
             />
 
             <CardPortfolio className={"bg-slate-900 bg-opacity-50 rounded-xl"} thumbnail={webTisera} title={"Tisera"} description={"marketplace for government agency purchases and sales"} href={"https://tisera.id/"} />
+
+            <CardPortfolio className={"bg-slate-900 bg-opacity-50 rounded-xl"} thumbnail={webQuran} title={"Al-qur'an"} description={"a website for Al-qur'an"} href={"https://quran-ivory-pi.vercel.app/"} />
 
             <CardPortfolio className={"bg-slate-900 bg-opacity-50 rounded-xl"} thumbnail={webYokulak} title={"Yokulak"} description={"wholesale purchases for stall sellers"} href={"https://yokulak.com/"} />
 
