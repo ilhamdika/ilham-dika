@@ -37,68 +37,163 @@ export const About = () => {
     <>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <DotLoader color={"#a9dbd2"} loading={loading} size={150} />
+          <DotLoader color={"#38bdf8"} loading={loading} size={150} />
         </div>
       ) : (
-        <div>
-          <div className="grid grid-cols-2 laptop:flex-row dekstop:flex-row tablet:flex-row mobile:h-auto mobile:grid-cols-1 pt-10 mobile:pt-32 mb-2">
-            <div className="">
-              <div className="flex justify-center">
-                <div className="">
-                  <img src={HeroImg} alt="IMG-20211017-123751" border="0" className="rounded-full w-64" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
-                  {/* <h1 className="dark:text-white justify-center items-center flex mt-2">
-                Hi, internet
-            </h1> */}
-                  <h1 className="dark:text-white justify-center items-center flex text-2xl font-thin mt-2" data-aos="zoom-out-down">
-                    Ilham Dika Permana
-                  </h1>
-                  <h1 className="dark:text-white justify-center items-center flex text-xl font-thin mt-2">Web Developer</h1>
-                  <div className="flex flex-row">
-                    <Link to="https://www.github.com/ilhamdika" target="_blank">
-                      <img src={GitHub} className="w-10 h-10 mx-3 my-2 bg-dark rounded-3xl dark:rounded-none" />
-                    </Link>
-                    <Link to="https://www.instagram.com/ilham_dika/" target="_blank">
-                      <img src={Instagram} className="w-10 h-10 mx-3 my-2 bg-dark rounded-2xl dark:rounded-none" />
-                    </Link>
-                    <Link to={`mailto:ilham27dika@gmail.com`}>
-                      <img src={Mail} className="w-10 h-10 mx-3 my-2 bg-dark rounded-xl dark:rounded-none" />
-                    </Link>
-                    <Link to={"https://www.linkedin.com/in/ilham-dika-permana/"} target="_blank">
-                      <img src={LinkedIn} className="w-10 h-10 mx-3 my-2 bg-dark rounded-3xl dark:rounded-none" />
-                    </Link>
-                  </div>
+        <div className="space-y-16 tablet:space-y-20">
+          {/* Hero about */}
+          <section className="glass-panel px-6 tablet:px-10 py-10 tablet:py-12 grid grid-cols-1 tablet:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-10 items-center">
+            <div className="flex justify-center">
+              <div className="relative w-52 h-52 tablet:w-60 tablet:h-60">
+                <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-sky-500/50 via-cyan-400/40 to-indigo-500/60 blur-2xl opacity-80 animate-float-slow" />
+                <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-slate-900/80 border border-white/10">
+                  <img
+                    src={HeroImg}
+                    alt="Profile Ilham Dika Permana"
+                    className="rounded-full w-40 h-40 tablet:w-44 tablet:h-44 object-cover"
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
+                  />
                 </div>
               </div>
             </div>
-            <div className="p-4 mt-4">
-              <TypeIt className="dark:text-white text-3xl font-thin mobile:pt-32">About me</TypeIt>
-              <p className="dark:text-white text-xl font-thin mt-3 text-justify" data-aos="fade-up" data-aos-duration="3000">
-                I am a fullstack developer who is always motivated and able to work together in a team or work individually. Now looking for a position as a web developer. Someone who is thorough, structured, and nimble when doing tasks.
-                Ambitious to learn and grow from the experiences I've had.
+
+            <div className="space-y-4">
+              <TypeIt className="dark:text-white text-3xl tablet:text-4xl font-semibold">
+                About me
+              </TypeIt>
+              <p className="dark:text-sky-200 text-sm uppercase tracking-[0.25em]">
+                Fullstack Web Developer
               </p>
-            </div>
-          </div>
+              <p
+                className="dark:text-white/85 text-sm tablet:text-base leading-relaxed text-justify"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+              >
+                I am a fullstack developer who is always motivated and able to work together
+                in a team or individually. I enjoy turning briefs into digital products that
+                feel modern, clean, and intuitive to use.
+              </p>
+              <p
+                className="dark:text-white/80 text-sm tablet:text-base leading-relaxed text-justify"
+                data-aos="fade-up"
+                data-aos-duration="1400"
+              >
+                I&apos;m currently looking for opportunities as a web developer, and I&apos;m
+                ambitious to keep learning and growing from every experience I have.
+              </p>
 
-          <div>
-            <h1 className="dark:text-white text-3xl font-bold text-center">My Skills</h1>
-
-            <div className="dekstop:grid-cols-9 laptop:grid-cols-9 tablet:grid-cols-7 flex flex-wrap justify-center">
-              {/* {[1,2,3,4,5,6,7,8,9].map(i=>(
-                <img key={i}
-                src="/images/laravel.png"
-                className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2"
-                />
-            ))} */}
-              <img src={Html} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={Css} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={JavaScript} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={Php} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={ReactJs} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={Laravel} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={Bootstrap} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
-              <img src={Tailwind} className="w-28 h-28 max-w-sm mobile:w-14 mobile:h-14 tablet:w-24 mx-3 my-2" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" />
+              <div className="flex flex-wrap gap-3 pt-3">
+                <Link to="https://www.github.com/ilhamdika" target="_blank">
+                  <img
+                    src={GitHub}
+                    className="w-9 h-9 p-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:bg-slate-800 transition"
+                  />
+                </Link>
+                <Link to="https://www.instagram.com/ilham_dika/" target="_blank">
+                  <img
+                    src={Instagram}
+                    className="w-9 h-9 p-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:bg-slate-800 transition"
+                  />
+                </Link>
+                <Link to={`mailto:ilham27dika@gmail.com`}>
+                  <img
+                    src={Mail}
+                    className="w-9 h-9 p-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:bg-slate-800 transition"
+                  />
+                </Link>
+                <Link to={"https://www.linkedin.com/in/ilham-dika-permana/"} target="_blank">
+                  <img
+                    src={LinkedIn}
+                    className="w-9 h-9 p-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:bg-slate-800 transition"
+                  />
+                </Link>
+              </div>
             </div>
-          </div>
+          </section>
+
+          {/* Skills */}
+          <section className="space-y-8">
+            <h1 className="dark:text-white text-2xl tablet:text-3xl font-semibold text-center">
+              My Skills
+            </h1>
+
+            <div className="flex flex-wrap justify-center gap-4 tablet:gap-6">
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Html} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">HTML</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Css} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">CSS</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={JavaScript} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">JavaScript</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Php} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">PHP</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={ReactJs} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">React</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Laravel} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">Laravel</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Bootstrap} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">Bootstrap</span>
+              </div>
+              <div
+                className="glass-panel px-5 py-4 rounded-2xl flex flex-col items-center w-24 h-24 tablet:w-28 tablet:h-28"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <img src={Tailwind} className="w-10 h-10 tablet:w-12 tablet:h-12" />
+                <span className="dark:text-white text-xs mt-2 font-light">Tailwind</span>
+              </div>
+            </div>
+          </section>
 
           {/* <div className="mt-3">
             <h1 className="dark:text-white text-3xl font-bold text-center">Education</h1>

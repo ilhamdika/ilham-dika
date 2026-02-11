@@ -1,28 +1,33 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import LayoutPage from "./layout/LayoutPage";
-import TypeIt from "typeit-react";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import HeroImg from "./assets/images/landing.png"
-import HeroImg2 from "./assets/images/landing2.png"
-import HomePage from './Pages/Index'
+import HomePage from "./Pages/Index";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
-import AOS from 'aos';
-import { useEffect } from "react";
+import AOS from "aos";
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
+  return null;
+};
 
 const app = () => {
-    useEffect(() => {
-        AOS.init();
-      }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <LayoutPage>
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
-        </Routes>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </LayoutPage>
   );
 }
