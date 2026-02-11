@@ -1,5 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Play:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-Montserrat antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+/* Global premium look utilities */
+@layer components {
+  .premium-gradient {
+    background:
+      radial-gradient(circle at top left, rgba(191, 219, 254, 0.45), transparent 55%),
+      radial-gradient(circle at bottom right, rgba(224, 242, 254, 0.55), transparent 55%),
+      radial-gradient(circle at center, rgba(248, 250, 252, 1), rgba(248, 250, 252, 1));
+  }
+
+  .glass-panel {
+    @apply bg-white/5 border border-white/10 rounded-3xl shadow-xl shadow-sky-900/40 backdrop-blur-2xl;
+  }
+
+  .soft-hover-lift {
+    @apply transition duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .nav-link-premium {
+    @apply relative text-sm tablet:text-base text-slate-100/80 tracking-wide transition-colors duration-300 hover:text-sky-300;
+  }
+
+  .nav-link-premium::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 0;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    transition: width 280ms ease-out;
+  }
+
+  .nav-link-premium:hover::after {
+    width: 100%;
+  }
+
+  .nav-link-premium--active {
+    @apply text-sky-300;
+  }
+
+  .nav-link-premium--active::after {
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+}
